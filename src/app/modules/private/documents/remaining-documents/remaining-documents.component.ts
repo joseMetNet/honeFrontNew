@@ -12,6 +12,7 @@ import { ProviderAssistanceComponent } from '../../../../shared/modals/provider-
 
 import { FetchBackend } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { presetColors } from 'ng-zorro-antd/core/color';
 
 @Component({
    selector: 'app-remaining-documents',
@@ -29,6 +30,15 @@ export class RemainingDocumentsComponent implements OnInit {
    documentList: DocumentInterface[] = [];
 
    formDate!: FormGroup;
+   message1: string = 'El documento No puede ser mayor a 30 días de la fecha de expedición.';
+   
+   message: string[] = [
+      'Resolución actualizada Superintendencia de Vigilancia y Seguridad Privada (Si aplica).',
+      'Resolución para trabajo en alturas (Si aplica).',
+      'Resolución para trabajo en confinados (Si aplica).'
+    ]
+   customColors: string[] = ['#f37248'];
+   presetColors = presetColors;
 
    constructor(
       private eventManager: EventManagerService,
@@ -148,6 +158,6 @@ export class RemainingDocumentsComponent implements OnInit {
       maxDate.setDate(today.getDate() + 30);
       return current < today || current > maxDate;
    };
-
+   
    
 }
