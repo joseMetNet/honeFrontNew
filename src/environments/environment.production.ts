@@ -3,7 +3,8 @@ export const environment = {
    // url: 'https://backpruebashone.azurewebsites.net/api/',
    // urlNewBack: 'http://localhost:8080/',
    // url: 'http://localhost:8080/api/', //Para conectarse al back viejo
-   url: 'https://honesolutionsbackproduction.azurewebsites.net/api/',
+   // url: 'https://honesolutionsbackproduction.azurewebsites.net/api/',
+   url: 'https://api-honesolutions-prestadores-lissom.azurewebsites.net/api/',
    urlNewBack: 'https://honesolutionsbacknew.azurewebsites.net/',
    PASS_ENC: '123456',
 
