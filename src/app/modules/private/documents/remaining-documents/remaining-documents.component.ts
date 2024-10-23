@@ -31,6 +31,7 @@ export class RemainingDocumentsComponent implements OnInit {
 
    formDate!: FormGroup;
    message1: string = 'El documento No puede ser mayor a 30 días de la fecha de expedición.';
+   message2: string = 'Recuerda que la fecha de expedición del documento debe ser del año presente.';
    
    message: string[] = [
       'Resolución actualizada Superintendencia de Vigilancia y Seguridad Privada (Si aplica).',
