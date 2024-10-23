@@ -21,13 +21,18 @@
                                 {{ item.NameDocument }}
         
                                 <!-- Input tipo fecha con deshabilitación de fechas para los idTypeDocuments específicos -->
-                                @if (item.idTypeDocuments == 7 || item.idTypeDocuments == 77 || item.idTypeDocuments == 108  || item.idTypeDocuments == 113 || item.idTypeDocuments == 4 ) {
+                                @if (item.idTypeDocuments == 7 || item.idTypeDocuments == 77 || item.idTypeDocuments == 108  || item.idTypeDocuments == 113 ) {
                                     <nz-date-picker 
                                         nzFormat="yyyy-MM-dd" 
                                         [nzDisabledDate]="disableDates" 
                                         formControlName="fecha">
                                     </nz-date-picker>
                                     <p style="color: red; font-size: 11px; text-align: justify;" >{{message1}}</p>
+
+                                }
+                                @if ( item.idTypeDocuments == 4 ) {
+                                 
+                                    <p style="color: red; font-size: 11px; text-align: justify;" >{{message2}}</p>
 
                                 }
                                 <!-- Input tipo fecha normal para otros documentos -->
