@@ -43,6 +43,7 @@ export class ListDocumentsComponent implements OnInit {
          this.callApi = this.eventManager.getPercentApi();
          if (this.callApi) {
             this.getDocumentPercent();
+            location.reload();
          }
       });
      
